@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --note-size: 250px;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(159, 197, 255);
+}
+
+#notes-container {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--note-size));
+    gap: 1.5rem;
+}
+
+.note,
+.add-note-btn {
+    height: var(--note-size);
+    border-radius: 1rem;
+    border: none;
+}
+
+.note {
+    padding: 1rem;
+    font-size: 1rem;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+    resize: none;
+}
+
+.note:focus-visible,
+.add-note-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.45);
+}
+
+.add-note-btn {
+    font-size: 120px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color .25s;
+}
+
+.add-note-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
